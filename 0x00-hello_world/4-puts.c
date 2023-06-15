@@ -2,7 +2,7 @@
 /**
  * main - entry point of the program.
  * Description: main - prints out a string to the output.
- * Returns 0 if success.
+ * Return: 0 if success.
  */
 int main(void)
 {
