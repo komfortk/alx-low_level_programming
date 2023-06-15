@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * Description: main - prints out a string to the output
- * Successful = Return 0
+ * main - entry point of the program.
+ * Description: main - prints out a string to the output.
+ * Returns 0 if success.
  */
 int main(void)
 {
