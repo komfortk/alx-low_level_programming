@@ -2,17 +2,17 @@
 /**
  * main - Prints numbers from 0 to 9.
  *
- * Result: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int num;
+	int i;
 
-	while (num < 10)
+	for (i = 48; i < 58; i++)
 	{
-		printf("%d", num);
-		num += 1;
+		putchar(i);
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
+
