@@ -8,16 +8,37 @@
  */
 int main(void)
 {
-	int count;
-	unsigned int fib1 = 1, fib2 = 2, sum;
+	unsigned long int i;
+	unsigned long int fir = 1;
+	unsigned long int sec = 2;
+	unsigned long int l = 1000000000;
+	unsigned long int fir1;
+	unsigned long int fir2;
+	unsigned long int sec1;
+	unsigned long int sec2;
 
-	printf("%u, %u", fib1, fib2);
-	for (count = 3; count <= 98; count++)
+	printf("%lu", fir);
+
+	for (i = 1; i < 91; i++)
 	{
-		sum = fib1 + fib2;
-		printf(", %u", sum);
-		fib1 = fib2;
-		fib2 = sum;
+		printf(", %lu", sec);
+		sec += fir;
+		fir = sec - fir;
+	}
+
+	fir1 = (fir / l);
+	fir2 = (fir % l);
+	sec1 = (sec / l);
+	sec2 = (sec % l);
+
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %lu", sec1 + (sec2 / l));
+		printf("%lu", sec2 % l);
+		sec1 = sec1 + fir1;
+		fir1 = sec1 - fir1;
+		sec2 = sec2 + fir2;
+		fir2 = sec2 - fir2;
 	}
 	printf("\n");
 	return (0);
