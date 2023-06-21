@@ -18,11 +18,11 @@ void print_times_table(int n)
 
 				if (j == 0)
 				{
-					printf("%d", product);
+					printf("%-4d", product);
 				}
 				else
 				{
-					printf(",   %d", product);
+					printf(", %4d", product);
 				}
 			}
 			printf("\n");
