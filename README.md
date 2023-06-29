@@ -1,1 +1,1 @@
-README file for alx-low_level_programming
+README file for C language
