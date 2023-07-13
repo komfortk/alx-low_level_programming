@@ -10,5 +10,6 @@ int _putchar(char c);
 void errors(void);
 int _strlen(char *s);
 int is_digit(char *s);
+char *_memset(char *s, char b, unsigned int n);
 
 #endif
