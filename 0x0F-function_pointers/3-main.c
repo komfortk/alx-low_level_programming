@@ -8,36 +8,36 @@
  *
  * Return: Always 0 (success)
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int a, b, result;
-	int (*func)(int, int);
+	int num1, num2;
+	char *op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 
-	func = get_op_func(argv[2]);
+	num1 = atoi(argv[1]);
+	op = argv[2];
+	num2 = atoi(argv[3]);
 
-	if (!func)
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-
-	if ((*argv[2] == '/' || *argv[2] == '%') && b == 0)
+	if ((*op == '/' && num2 == 0) ||
+	    (*op == '%' && num2 == 0))
 	{
 		printf("Error\n");
-		return (100);
+		exit(100);
 	}
 
-	result = func(a, b);
-	printf("%d\n", result);
+	printf("%d\n", get_op_func(op)(num1, num2));
+
 
 	return (0);
 }
