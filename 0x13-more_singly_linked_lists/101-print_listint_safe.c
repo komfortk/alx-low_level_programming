@@ -24,7 +24,7 @@ size_t looped_listint_len(const listint_t *head)
 	{
 		if (temp == current)
 		{
-			temp = current;
+			temp = head;
 			while (temp != current)
 			{
 				nodes++;
@@ -57,7 +57,7 @@ size_t looped_listint_len(const listint_t *head)
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes, i;
+	size_t nodes, i = 0;
 
 	nodes = looped_listint_len(head);
 
